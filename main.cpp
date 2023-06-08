@@ -8,8 +8,8 @@
 /*
  * \brief fills the file from the vector with users or messages
  *
- * \param[in] file_name path to the file with users
- * \param[out] msgs a vector to be filled
+ * \param[in] file_name - path to the file with users
+ * \param[in] objs      - a vector with objects
  */
 template <typename T>
 static void save_all_into_file(
@@ -27,10 +27,10 @@ static void save_all_into_file(
 }
 
 /*
- * read file and fills the vector
+ * \brief read file and fills the vector
  *
- * \param[in] file_name path to the file with users or messages
- * \param[out] msgs a vector to be filled
+ * \param[in]  file_name - path to the file with users or messages
+ * \param[out] objs      - a vector to be filled
  */
 template <typename T>
 static void read_all_from_file(
@@ -38,7 +38,6 @@ static void read_all_from_file(
 {
     std::fstream in(file_name, std::ios::in);
     if (!in.is_open()) {
-        std::cout << "why" << std::endl;
         throw std::runtime_error(
             "error: could not open this file " + file_name);
         return;
