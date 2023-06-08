@@ -13,6 +13,8 @@ public:
     {
     }
 
+    User() = default;
+
     friend std::fstream& operator>>(std::fstream& is, User& obj);
     friend std::ostream& operator<<(std::ostream& os, const User& obj);
 

@@ -43,7 +43,7 @@ static void read_all_from_file(
         return;
     }
     in.seekg(0, std::ios_base::beg);
-    T new_obj("", "", "");
+    T new_obj;
     while (in >> new_obj) {
         objs.push_back(new_obj);
     }
